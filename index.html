@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bangla OCR → SutonnyMJ</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">
+Bangla OCR → SutonnyMJ
+</div>
+
+<div class="subtitle">
+Advanced Bangla Text Scanner & Converter
+</div>
+
+<label class="upload-box" for="imageInput">
+
+<h2>📁 Upload Bangla Image</h2>
+
+<p>Click here to select image</p>
+
+</label>
+
+<input type="file" id="imageInput" accept="image/*">
+
+<img id="preview" class="preview">
+
+<div class="buttons">
+
+<button class="scan-btn" onclick="scanText()">
+🔍 Scan Text
+</button>
+
+<button class="convert-btn" onclick="convertText()">
+⚡ Convert
+</button>
+
+<button class="copy-btn" onclick="copyText()">
+📋 Copy
+</button>
+
+<button class="download-btn" onclick="downloadText()">
+⬇ Download
+</button>
+
+</div>
+
+<div class="loader" id="loader"></div>
+
+<div class="progress-container" id="progressContainer">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+<div class="section">
+
+<div class="section-title">
+Unicode Bangla Text
+</div>
+
+<textarea
+id="unicodeText"
+placeholder="Scanned Bangla text..."
+></textarea>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">
+SutonnyMJ Text
+</div>
+
+<textarea
+id="sutonnyText"
+placeholder="Converted SutonnyMJ text..."
+></textarea>
+
+</div>
+
+<div class="footer">
+Made with ❤️ using JavaScript & OCR
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
